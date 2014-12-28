@@ -1,0 +1,59 @@
+- - - - - - - - - - - - - - - - - - - - 
+Q1: How did viewing two different versions help you spot bugs?
+It was easier to identify possible error locations (e.g. what had changed from the working version).
+- - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - 
+Q2: How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+Easier to identify bugs, correct errors and learn from mistakes.  It will also provide quick access to working files in case new files break a program.  Allows me to take more chances as an experimental programmer.
+- - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - 
+Q3: What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+PROS - flexibility to determine what a logical chunk is
+CONS - likelihood of forgetting to commit and ending up with a 'too big' commit
+- - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - 
+Q4: Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+Git was built for projects involving interrelated files.  Google Docs was built to support free-standing docs.
+- - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - 
+Q5: How can you use the commands git log and git diff to view the history of files?
+git log - shows when changes have been committed
+git diff - highlights the specific changes between files
+**Remember to use the down arrow to scroll.
+- - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - 
+Q6: How might using version control make you more confident to make changes that could break something?
+Because I know I can always undo the change and revert to the working previous version.
+- - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - 
+Q7: Now that you have your workspace set up, what do you want to try using Git for?
+For the websites that I am building with Python and eventually for any project work with digital files.
+- - - - - - - - - - - - - - - - - - - - 
+
+- - - - - - - - - - - - - - - - - - - - 
+TERMINAL COMMANDS:
+# Comparing Files
+$ diff -u game_old.js game_new.js
+
+# Launching Sublime text editor
+$ subl
+
+# Making directories and text files
+$ mkdir version-control
+$ cd version-control
+$ mkdir reflections
+$ cd reflections
+$ subl lesson_1_reflections.txt
+- - - - - - - - - - - - - - - - - - - - 
+
+- - - - - - - - - - - - - - - - - - - - 
+SUBLIME-TERMINAL SETUP
+http://forums.udacity.com/questions/100227105/-bash-subl-command-not-found#ud775
+- - - - - - - - - - - - - - - - - - - - 
+
+
+QUIZ - git log and git diff
+1. What is the ID of the commit with the message "Revert controls"?
+2. How many lines were added in that commit?
+3. How many lines were deleted?
+4. What is a git checkout?  (running the code of a previous version of the code)
