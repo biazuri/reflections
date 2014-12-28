@@ -1,0 +1,6 @@
+Q.1  What happens when you initialize a repository? Why do you need to do it?
+A .git tracking file is created but no commits are created.  A commit needs to be created manually for the tracking to start.  Use git status to check what can be committed.
+
+Q.2 How is the staging area different from the working directory and the repository? What value do you think it offers?
+Staging area is like a temporary holding area for changes made but not yet committed to the repository.  It provides an intermediate completion step and allows for larger associated chunks to be committed together (instead of in bits).
+
