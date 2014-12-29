@@ -1,3 +1,11 @@
+
+Learned to add to staging.
+Make a commit.
+Create a branch.
+Merge branches.
+Resolve conflicts between to-be-merged branches.
+
+- - - - - - - - - - - - - - - - - - - -
 Q.1  What happens when you initialize a repository? Why do you need to do it?
 A .git tracking file is created but no commits are created.  A commit needs to be created manually for the tracking to start.  Use git status to check what can be committed.
 
@@ -6,4 +14,60 @@ Staging area is like a temporary holding area for changes made but not yet commi
 
 Q3. How can you use the staging area to make sure you have one commit per logical change?
 Use git diff to compare the changes to be made with the working directory and git diff --staged to compare the changes to be made with the repository to ensure the changes to be made are the desired ones.
+
+Q4. What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+Merging two branches makes them one and combines the commits contained in both of them.
+
+Q5. What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Automatic merging makes merging more efficient, especially when no conflicts exist.
+
+- - - - - - - - - - - - - - - - - - - -
+
+$ git add lesson_2_reflections.txt
+$ git status
+$ git commit -m "Add lesson 2 reflections"
+
+How do you tell git to make a new repository?
+$ cd dir_folder  #cd into directory
+$ git init
+$ ls -a
+
+How do you add files to the staging area?
+$ git add file_name  #adds files to staging area
+
+How do you add a commit with files in the staging area?
+$ git commit
+$ git commit -m "somemessage"
+
+How can we compare the files in the working directory and staging area?
+$ git diff  #with no arguments
+$ git diff --staged #to compare staging area with repo files
+$ git reset --hard #permanent removal of staging area changes
+$ git checkout master #fix detached head command (jump back to working version?)
+
+How can I find my current branch?
+$ git branch
+
+How can I create a new branch?
+$ git branch easy-mode  #create a branch called easy-mode
+
+How can I move into a branch?
+$ git checkout easy-mode  #switch into the easy-mode branch
+$ git checkout master
+
+How can a new branch be accessed and visualized?
+$ git log  #view the updates to this branch
+$ git log --graph --oneline master coins #see difference between branches
+
+How do you combine branches to a single branch?
+$ git checkout master
+$ git merge master coins
+
+How do revert to a previous commit and erase subsequent ones?
+$ git reset --hard 0d1d7fc32
+
+How to see the changes introduced in a commit without knowing its parent?
+$ git show 0d1d7fc32
+
+
 
