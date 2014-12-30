@@ -14,3 +14,58 @@ Reduces the number of potential conflicts when committing future changes (e.g. o
 
 Q5. How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
 Saving files as different versions.  Git and GitHub are much cleaner and provide better access to past working states.
+
+Q6. When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+Working in master is faster but using branches is useful when experimenting with new features or cleaning up past code, as we'll want to review the code to ensure it doesn't break anything before merging it with master.
+
+Q7. How is using branches more complicated?
+Rather than simply pulling and pushing, you need to pull changes into your local master branch, merge the local master into your branch (different-oil, in our case), then push your branch to the remote before finally merging your branch into master, either locally or on GitHub.
+
+- - - - - - - - - - - - - - - - - - - - - - - 
+How can you view and create remotes?
+$ git remote  #check if remote exists
+$ git remote -v  #show remote information (more detailed)
+
+How can you create a remote with the name origin?
+$ git remote add origin https://github.com/biazuri/reflections.git 
+
+How can you send information to the remote?
+$ git push origin master  #two arguments (to where / from where)
+
+How can you pull information from the remote to your local repo?
+$ git pull origin master  #two arguments (from where, to where)
+
+How do you clone (local copy) a fork?
+$ git clone https://.. #url of the fork on your github repo
+
+How do you give others permission to edit your repo?
+GitHub > Settings > Collaborators
+
+How can you retrieve commits on GitHub without having to merge locally?
+$ git fetch origin #update the local copies on the branch orign
+
+What two commands is git pull equivalent to?
+$ git pull origin master == $ git fetch origin and $ git merge master origin/master
+
+What's an example of a good collaborative workflow?
+$ git branch different-oil #create new branch
+$ git checkout different-oil #work on new branch
+$ git add cake-recipe.txt
+$ git commit
+$ git push origin different-oil #push different branch instead of master
+##Then create pull request on GitHub.
+
+What are the steps to update pull requests to resolve conflicts?
+$ git pull origin master
+$ git checkout different-oil
+$ git merge master different-oil
+##fix merge conflict
+$ git commit
+$ git pull origin master #if no need to review changes
+or
+$ git fetch #run git fetch to examine the changes
+$ git merge origin/master master
+
+
+
+
